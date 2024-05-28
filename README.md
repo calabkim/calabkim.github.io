@@ -19,5 +19,3 @@ Technologies Used:
 - AOS (Animate On Scroll): For smooth animations when elements come into view.
 - Vanilla Tilt: For the 3D tilt effect on the character image.
 - Formspree: For handling contact form submissions.
-
-![image](https://github.com/calabkim/calabkim.github.io/assets/171094409/674547c0-3739-4e71-a2fa-e688d56cb2d7)
