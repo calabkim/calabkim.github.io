@@ -1,8 +1,6 @@
 # calabkim.github.io
 Welcome to my personal homepage! 
 
-![image](https://github.com/calabkim/calabkim.github.io/assets/171094409/11e416e6-918e-4977-8fdc-58adebd43e1b)
-
 Features of This Site:
 
 - Dark/Light Mode Toggle: Easily switch between dark and light modes for better readability.
@@ -21,3 +19,5 @@ Technologies Used:
 - AOS (Animate On Scroll): For smooth animations when elements come into view.
 - Vanilla Tilt: For the 3D tilt effect on the character image.
 - Formspree: For handling contact form submissions.
+
+![image](https://github.com/calabkim/calabkim.github.io/assets/171094409/674547c0-3739-4e71-a2fa-e688d56cb2d7)
