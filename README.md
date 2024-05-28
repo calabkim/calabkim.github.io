@@ -1,6 +1,8 @@
 # calabkim.github.io
 Welcome to my personal homepage! 
 
+![image](https://github.com/calabkim/calabkim.github.io/assets/171094409/11e416e6-918e-4977-8fdc-58adebd43e1b)
+
 Features of This Site:
 
 - Dark/Light Mode Toggle: Easily switch between dark and light modes for better readability.
