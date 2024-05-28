@@ -40,6 +40,7 @@ document.getElementById('back-to-top').addEventListener('click', function() {
 
 // Initialize AOS (Animate On Scroll)
 AOS.init();
+
 // Function to create and animate stars
 function createStar() {
     const star = document.createElement('div');
