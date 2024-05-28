@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tae (Calab) Kim - Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom-style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #f8f9fa;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .intro {
+            margin-top: 0;
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        .container-narrow {
+            max-width: 800px;
+        }
+        .rotate {
+            transition: transform 0.1s ease;
+        }
+        .header, .footer {
+            background: linear-gradient(135deg, #1c1c1c, #333);
+        }
+        .card {
+            background: #2c2c2c;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .btn-outline-light {
+            border-color: #f8f9fa;
+            color: #f8f9fa;
+        }
+        .btn-outline-light:hover {
+            background-color: #f8f9fa;
+            color: #1a1a1a;
+        }
+        .btn-primary, .btn-secondary {
+            border-radius: 20px;
+        }
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: transparent;
+            overflow: hidden;
+        }
+        .star {
+            position: absolute;
+            top: -10px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
+        }
+        .game-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+        #gameCanvas {
+            border: 2px solid #fff;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+    <header class="bg-dark text-white py-3 header">
+        <div class="container d-flex justify-content-center position-relative">
+            <button class="btn btn-outline-light toggle-switch" onclick="toggleTheme()">Light Mode</button>
+        </div>
+    </header>
+    
+    <div class="stars"></div> <!-- Star container -->
+    
+    <!-- Character Image below the navigation bar -->
+    <div class="text-center mt-4">
+        <img src="https://i.ibb.co/wBBzkQj/vecteezy-3d-cartoon-character-animation-cute-little-astronaut-42883540.png" alt="3D Character" class="img-fluid float-animation rotate" data-tilt style="max-width: 400px;">
+    </div>
+
+    <!-- Main Content Wrapper with Narrow Width -->
+    <div class="container container-narrow">
+        <div class="intro bg-dark text-white p-4 rounded card" data-aos="fade-up">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="h4">Hello, I'm a statistics major seeking a co-op position, based in Canada!</h2>
+                    <h3 class="h5">Calab Kim</h3>
+                    <p>Statistics Major / Data Analyst / Web Developer</p>
+                    <p>Currently pursuing a Bachelor of Statistics at Simon Fraser University, I am passionate about using data to drive decisions and build meaningful insights. My experience includes developing statistical models, analyzing data sets, and creating statistical model packages.</p>
+                    <p>I am passionate about work environments where I can bring my abilities to your company and assist with data collection and driving meaningful reports.</p>
+                    <p>Proficient in R and various statistical software, I am eager to apply my analytical skills in a co-op position to gain hands-on experience and contribute to impactful projects.</p>
+                    <p>I ♥ road trips and drove across entire continents in 2023.</p>
+                </div>
+            </div>
+        </div>
+        <div class="contact bg-dark text-white p-4 rounded my-4 card" id="contact" data-aos="fade-up">
+            <h2 class="h4">On the web</h2>
+            <div class="social-links">
+                <a href="https://www.instagram.com/calab0912/" class="d-block text-white"><i class="fab fa-instagram"></i> @calab0912</a>
+                <a href="https://www.linkedin.com/in/calab-kim-919631310/" class="d-block text-white"><i class="fab fa-linkedin"></i> @calab Kim</a>
+            </div>
+            <div class="buttons mt-3">
+                <a href="portfolio.html" class="btn btn-primary">My portfolio</a>
+                <a href="resume.html" class="btn btn-secondary">My resume</a>
+            </div>
+        </div>
+    <section id="arcade-game" data-aos="fade-up">
+        <div class="row justify-content-center">
+            <div class="col-md-12 mb-4">
+                <div class="game-item bg-dark text-white p-3 rounded card">
+                    <h3 class="h5 mt-3 text-center">To move the avatar, use the arrow keys on your keyboard.</h3>
+                    <div class="game-container">
+                        <canvas id="gameCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="bg-dark text-white py-3 footer">
+    <div class="container text-center">
+        <p class="mt-3 footer-text">© 2024 Calab Kim. All Rights Reserved.</p>
+        <p class="mt-3 footer-text"> Created by HTML</p>
+    </div>
+</footer>
+
+<div id="back-to-top" class="btn btn-primary">Top</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="main.js"></script>
+<script src="custom-script.js"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+        max: 25,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const character = document.querySelector(".rotate");
+        document.addEventListener("mousemove", function(e) {
+            const x = (e.clientX / window.innerWidth) * 2 - 1;
+            const y = (e.clientY / window.innerHeight) * 2 - 1;
+            const rotationX = y * 20;
+            const rotationY = x * 20;
+            character.style.transform = `rotateX(${-rotationX}deg) rotateY(${rotationY}deg)`;
+        });
+    });
+</script>
+<script>
+    function createStar() {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        star.style.opacity = Math.random();
+        star.style.width = `${Math.random() * 3 + 1}px`;
+        star.style.height = star.style.width;
+        document.querySelector('.stars').appendChild(star);
+
+        star.animate([
+            { transform: 'translateY(0)', opacity: 0 },
+            { transform: 'translateY(100vh)', opacity: 1 }
+        ], {
+            duration: parseInt(star.style.animationDuration) * 1000,
+            easing: 'linear'
+        });
+
+        setTimeout(() => {
+            star.remove();
+        }, parseInt(star.style.animationDuration) * 1000);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        setInterval(() => {
+            for (let i = 0; i < 5; i++) {
+                createStar();
+            }
+        }, 50);
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = 700;
+        canvas.height = 400;
+
+        let player = {
+            x: canvas.width / 2 - 25,
+            y: canvas.height - 50,
+            width: 50,
+            height: 50,
+            speed: 5,
+            dx: 0
+        };
+
+        let objects = [];
+        let score = 0;
+        let gameInterval;
+        let objectInterval;
+
+        function drawPlayer() {
+            ctx.fillStyle = "#fff";
+            ctx.fillRect(player.x, player.y, player.width, player.height);
+        }
+
+        function drawObject(obj) {
+            ctx.fillStyle = "red";
+            ctx.fillRect(obj.x, obj.y, obj.width, obj.height);
+        }
+
+        function movePlayer() {
+            player.x += player.dx;
+
+            if (player.x < 0) {
+                player.x = 0;
+            }
+            if (player.x + player.width > canvas.width) {
+                player.x = canvas.width - player.width;
+            }
+        }
+
+        function updateObjects() {
+            for (let i = 0; i < objects.length; i++) {
+                objects[i].y += objects[i].dy;
+
+                if (objects[i].y + objects[i].height > canvas.height) {
+                    objects.splice(i, 1);
+                    i--;
+                    score -= 1;
+                }
+            }
+        }
+
+        function checkCollision() {
+            for (let i = 0; i < objects.length; i++) {
+                if (
+                    player.x < objects[i].x + objects[i].width &&
+                    player.x + player.width > objects[i].x &&
+                    player.y < objects[i].y + objects[i].height &&
+                    player.y + player.height > objects[i].y
+                ) {
+                    objects.splice(i, 1);
+                    i--;
+                    score += 1;
+                }
+            }
+        }
+
+        function clearCanvas() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+
+        function update() {
+            clearCanvas();
+            drawPlayer();
+            movePlayer();
+            updateObjects();
+            checkCollision();
+            for (let obj of objects) {
+                drawObject(obj);
+            }
+            ctx.fillStyle = "#fff";
+            ctx.font = "20px Arial";
+            ctx.fillText("Score: " + score, 10, 30);
+
+            if (score >= 10) {
+                endGame();
+            }
+        }
+
+        function newObject() {
+            let obj = {
+                x: Math.random() * (canvas.width - 20),
+                y: 0,
+                width: 20,
+                height: 20,
+                dy: 3
+            };
+            objects.push(obj);
+        }
+
+        function keyDown(e) {
+            if (e.key === "ArrowRight") {
+                player.dx = player.speed;
+            } else if (e.key === "ArrowLeft") {
+                player.dx = -player.speed;
+            }
+        }
+
+        function keyUp(e) {
+            if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+                player.dx = 0;
+            }
+        }
+
+        function startGame() {
+            gameInterval = setInterval(update, 20);
+            objectInterval = setInterval(newObject, 1000);
+        }
+
+        function endGame() {
+            clearInterval(gameInterval);
+            clearInterval(objectInterval);
+            alert("Game Over! Your final score is: " + score);
+        }
+
+        document.addEventListener("keydown", keyDown);
+        document.addEventListener("keyup", keyUp);
+        startGame();
+    });
+</script>
+</body>
+</html>

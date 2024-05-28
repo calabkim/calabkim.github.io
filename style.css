@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #1e1e1e, #333);
+    border-bottom: 2px solid #444;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.toggle-switch {
+    background-color: #008CBA;
+    border: none;
+    color: #ffffff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.light-mode .toggle-switch {
+    background-color: #ccc;
+    color: #000000;
+}
+
+.toggle-switch:hover {
+    background-color: #005f7f;
+}
+
+.parallax {
+    background-image: url('images/3d_image.png');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.7);
+}
+
+.content {
+    padding: 40px 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.intro, .contact, .skill-item, .testimonial-item, .work-item, .game-item {
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro:hover, .contact:hover, .skill-item:hover, .testimonial-item:hover, .work-item:hover, .game-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.intro h2, .contact h2, .skill-item h3, .testimonial-item h3, .work-item h3, .game-item h3 {
+    font-size: 1.5rem;
+}
+
+.intro h3, .testimonial-item h3, .work-item h3, .game-item h3 {
+    font-size: 1.25rem;
+}
+
+.intro p, .contact p, .testimonial-item p, .work-item p, .game-item p {
+    margin: 0 0 10px;
+}
+
+.social-links a {
+    display: block;
+    margin: 5px 0;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #008CBA;
+}
+
+.buttons a {
+    display: inline-block;
+    margin: 10px 5px 0;
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons a:hover {
+    background-color: #005f7f;
+    transform: translateY(-3px);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #1e1e1e, #333);
+    border-top: 2px solid #444;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    color: #ccc;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #008CBA;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #005f7f;
+    transform: translateY(-3px);
+}
+
+#3d-container {
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Additional Styles */
+.rotate {
+    transition: transform 0.1s ease;
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+.container-narrow {
+    max-width: 800px;
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: transparent;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
+}
+/* Add this to your existing style.css */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: transparent;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white;
+    opacity: 0;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+}
