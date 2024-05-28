@@ -1,6 +1,4 @@
 # calabkim.github.io
-Personal homepage for Calab Kim
-
 Welcome to my personal homepage! 
 
 Features of This Site:
