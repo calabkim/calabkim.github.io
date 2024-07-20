@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calab Kim - Portfolio</title>
+    <title>Tae (Calab) Kim - Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom-style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 </head>
 <body class="dark-mode">
@@ -17,9 +18,9 @@
             <button class="btn btn-outline-light toggle-switch" onclick="toggleTheme()">Light Mode</button>
         </div>
     </header>
-
-    <div class="stars"></div>
-
+    
+    <div class="stars"></div> <!-- Star container -->
+    
     <div class="text-center mt-4">
         <img src="https://i.ibb.co/wBBzkQj/vecteezy-3d-cartoon-character-animation-cute-little-astronaut-42883540.png" alt="3D Character" class="img-fluid float-animation rotate" data-tilt style="max-width: 400px;">
     </div>
@@ -28,11 +29,13 @@
         <div class="intro bg-dark text-white p-4 rounded card" data-aos="fade-up">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="h4">Hi, I'm Calab</h2>
-                    <h3 class="h5">Data Analyst</h3>
-                   <p>I'm a statistics major at Simon Fraser University with a strong background in Big Data and Data Analysis. I am passionate about using data to drive decisions and build meaningful insights. My experience includes developing statistical models, analyzing data sets, and creating statistical model packages.</p>
-                <p>Previously, I have worked as a Residence Assistant at Simon Fraser University and as a Marketing Specialist. I also served as a Sergeant in the Armed Forces Republic of Korea. Check out my latest project <a href="https://github.com/calabkim/KIM12-R-Package">KIM12-R-Package</a> which showcases advanced R programming and statistical modeling skills!</p>
-
+                    <h2 class="h4">Hello, I'm a statistics major seeking a co-op position, based in Canada!</h2>
+                    <h3 class="h5">Calab Kim</h3>
+                    <p>Statistics Major / Data Analyst / Student </p>
+                    <p>Currently pursuing a Bsc. Statistics at Simon Fraser University, I am passionate about using data to drive decisions and build meaningful insights. My experience includes developing statistical models, analyzing data sets, and creating statistical model packages.</p>
+                    <p>I am passionate about work environments where I can bring my abilities to the workplace and assist with data collection and driving meaningful reports.</p>
+                    <p>Proficient in R and various statistical software, I am eager to apply my analytical skills in a position where I can gain hands-on experience and contribute to impactful projects.</p>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -51,7 +54,7 @@
                 <a href="https://docs.google.com/document/d/1iL81hP2hgte7m0hQ178ogPRmiW9nQTDnK4CrEq6xb1Y/edit?usp=sharing" class="btn btn-info">Future Workplace</a>
             </div>
         </div>
-
+        <!-- Contact Form -->
         <div class="contact-form bg-dark text-white p-4 rounded my-4 card" id="contact-form" data-aos="fade-up">
             <h2 class="h4">Contact Me</h2>
             <form action="https://formspree.io/f/xjvndqap" method="POST">
@@ -86,6 +89,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="main.js"></script>
+    <script src="custom-script.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5,
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const character = document.querySelector(".rotate");
+            document.addEventListener("mousemove", function(e) {
+                const x = (e.clientX / window.innerWidth) * 2 - 1;
+                const y = (e.clientY / window.innerHeight) * 2 - 1;
+                const rotationX = y * 20;
+                const rotationY = x * 20;
+                character.style.transform = `rotateX(${-rotationX}deg) rotateY(${rotationY}deg)`;
+            });
+        });
+    </script>
 </body>
 </html>
-
