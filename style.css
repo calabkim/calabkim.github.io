@@ -83,7 +83,7 @@ nav a {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
-.intro, .contact, .contact-form {
+.intro, .contact, .skill-item, .testimonial-item, .work-item, .contact-form, .skills {
     padding: 20px;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -92,20 +92,20 @@ nav a {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.intro:hover, .contact:hover, .contact-form:hover {
+.intro:hover, .contact:hover, .skill-item:hover, .testimonial-item:hover, .work-item:hover, .contact-form:hover, .skills:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
-.intro h2, .contact h2, .contact-form h2 {
+.intro h2, .contact h2, .skill-item h3, .testimonial-item h3, .work-item h3, .contact-form h2, .skills h2 {
     font-size: 1.5rem;
 }
 
-.intro h3 {
+.intro h3, .testimonial-item h3, .work-item h3 {
     font-size: 1.25rem;
 }
 
-.intro p, .contact p {
+.intro p, .contact p, .testimonial-item p, .work-item p {
     margin: 0 0 10px;
 }
 
@@ -170,6 +170,13 @@ footer p {
     transform: translateY(-3px);
 }
 
+#3d-container {
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Additional Styles */
 .rotate {
     transition: transform 0.1s ease;
 }
