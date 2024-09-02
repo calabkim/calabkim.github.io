@@ -1,4 +1,4 @@
-# calebkim.github.io
+# calabkim.github.io
 Welcome to my personal homepage! 
 
 Features of This Site:
